@@ -10,10 +10,11 @@ import Lib
 -- HUnit Tests
 
 testEmpty =  show_tree Empty 0 0@?= False
+testNonEmpty =  show_tree tree1 0 9@?= True
 
 -- QuickCheck Tests
 
 main = defaultMain tests
 
 tests :: [TestFramework.Test]
-tests = [ testGroup "Tests" [testCase "emptyTree" testEmpty]]
+tests = [ testGroup "Tests" [testCase "emptyTree" testEmpty, testCase "nonEmptyTree" testNonEmpty]]
