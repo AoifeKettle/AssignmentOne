@@ -2,4 +2,4 @@ module Main where
 
 import Lib
 
-main = putStrLn helloTest
+main = mapM print [show_tree Empty 0 0]
